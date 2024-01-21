@@ -1,0 +1,70 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+  {% if page == 'accept' %}
+  <main class="formPage my-xl">
+    <div class="content-box">
+        <div class="formWrapper">
+          <a class="backButton" href="{% url 'interns' %}"><svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m13.789 7.155c.141-.108.3-.157.456-.157.389 0 .755.306.755.749v8.501c0 .445-.367.75-.755.75-.157 0-.316-.05-.457-.159-1.554-1.203-4.199-3.252-5.498-4.258-.184-.142-.29-.36-.29-.592 0-.23.107-.449.291-.591zm-.289 7.563v-5.446l-3.522 2.719z" fill-rule="nonzero"/></svg></i></a>
+            <br>
+
+            <form class="form" method="POST">
+                {% csrf_token %}
+                <!-- Input:Text -->
+                <p>Enter the credit for the intern"</p>
+                <div class="form__field">
+                    <label for="formInput#text">Credit</label>
+                    <input type="number" name="credit_input">
+                </div>
+                <input class="btn btn--sub btn--lg  my-md" type="submit" value="Confirm" />
+            </form>
+        </div>
+    </div>
+</main>
+
+  {% else %}
+
+    {% if for_review > 0 %}
+
+  <!-- Main Section -->
+  <main class="inbox my-xl">
+    <div class="content-box">
+      <h3 class="inbox__title">Interns(<span>{{for_review}}</span>)</h3>
+      <ul class="messages">
+        {% for intern in interns %}
+            <li class="message message--unread">
+                <span class="message__author">{{intern.owner.regno}}</span>
+                <span class="message__author">{{intern.owner.name}}</span>
+                <br>
+                <span class="message__author">{{intern.name}}</span>
+                <a href="{{ intern.certificate.url }}" download>Certificate</a>
+                <a href="{{ intern.permission.url }}" download>Permission</a>
+                <a href="{{ intern.report.url }}" download>Report</a>
+                <a href="{% url 'accept_intern' intern.id %}">Accept</a>
+                <a href="{% url 'reject_intern' intern.id %}">Decline</a>
+              </a>
+            </li> 
+              
+        {% endfor %}
+      </ul>
+    </div>
+  </main>
+
+      {% else %}
+
+      <main class="inbox my-xl">
+        <div class="content-box">
+          <h4 class="inbox__title"><span>No interns to be reviewed</span></h4>
+        </div>
+      </main>
+
+        
+      {% endif %}
+
+
+
+  {% endif %}
+
+
+{% endblock %}

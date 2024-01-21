@@ -1,0 +1,103 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+  <!-- Main Section -->
+  <main class="settingsPage profile my-md">
+    <div class="container">
+      <div class="layout">
+
+        <div class="column column--1of3">
+          <div class="card text-center">
+            <div class="card__body dev">
+              <h2 class="dev__name">{{profile.name}}</h2>
+              <p class="dev__title">{{profile.regno}}</p>
+              <p class="dev__title">{{profile.creditsearned}}</p>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+
+      {% if isAccepted %}
+
+      <h4>Accepted</h4>
+
+      <div class="grid grid--two">
+        {% for intern in interns %}
+              {% if intern.reviewed == True and intern.accepted == True%}
+              <div class="column">
+                <div class="card text-center">
+                  <div class="card__body dev">
+                    <h6> {{intern.name}} </h6>
+                    <p>Certificate Letter: <a href="{{ intern.certificate.url }}" download>Download </a>  <a href="{{ intern.certificate.url }}" target="_blank" class="card-link"> Open</a></p> 
+                    <p>Permission Letter: <a href="{{ intern.permission.url }}" download>Download </a>  <a href="{{ intern.permission.url }}" target="_blank" class="card-link"> Open</a></p> 
+                    
+                    <p>Report Letter: <a href="{{ intern.report.url }}" download>Download  </a> <a href="{{ intern.report.url }}" target="_blank" class="card-link"> Open</a></p>
+                    <p>{{intern.submissiondate.name}}</p>
+                    <p>{{intern.creditsrewarded}}</p>  
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+        {% endfor %}
+      </div>
+
+      {% endif %}
+
+      {% if isNotReviewed %}
+
+      <h4>Unreviewed</h4>
+
+      <div class="grid grid--two">
+        {% for intern in interns %}
+            {% if intern.reviewed == False %}
+            <div class="column">
+              <div class="card text-center">
+                <div class="card__body dev">
+                  <h6> {{intern.name}} </h6>
+                  <p>Certificate Letter: <a href="{{ intern.certificate.url }}" download>Download </a>  <a href="{{ intern.certificate.url }}" target="_blank" class="card-link"> Open</a></p> 
+                  <p>Permission Letter: <a href="{{ intern.permission.url }}" download>Download </a>  <a href="{{ intern.permission.url }}" target="_blank" class="card-link"> Open</a></p> 
+                  
+                  <p>Report Letter: <a href="{{ intern.report.url }}" download>Download  </a> <a href="{{ intern.report.url }}" target="_blank" class="card-link"> Open</a></p>
+                  <p>{{intern.submissiondate.name}}</p>
+                  <p>{{intern.creditsrewarded}}</p>  
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+      </div>
+
+      {% endif %}
+
+      {% if isRejected %}
+
+      <h4>Rejected</h4>
+
+      <div class="grid grid--two">
+        {% for intern in interns %}
+            {% if intern.reviewed == True and intern.accepted == False %}
+            <div class="column">
+              <div class="card text-center">
+                <div class="card__body dev">
+                  <h6> {{intern.name}} </h6>
+                  <p>Certificate Letter: <a href="{{ intern.certificate.url }}" download>Download </a>  <a href="{{ intern.certificate.url }}" target="_blank" class="card-link"> Open</a></p> 
+                  <p>Permission Letter: <a href="{{ intern.permission.url }}" download>Download </a>  <a href="{{ intern.permission.url }}" target="_blank" class="card-link"> Open</a></p> 
+                  
+                  <p>Report Letter: <a href="{{ intern.report.url }}" download>Download  </a> <a href="{{ intern.report.url }}" target="_blank" class="card-link"> Open</a></p>
+                  <p>{{intern.submissiondate.name}}</p>
+                  <p>{{intern.creditsrewarded}}</p>  
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+      </div>
+
+      {% endif %}
+      
+    </div>
+  </main>
+
+{% endblock %}

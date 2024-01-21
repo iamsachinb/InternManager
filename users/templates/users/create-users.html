@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="auth">
+    <div class="card">
+
+      <form action="{% url 'create-users' %}" method="POST" class="form auth__form" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form__field">
+            <label for="fileInput">Upload Excel file:</label>
+            <input type="file" name="excel_file" accept=".xlsx, .xls">
+            <p style="color: red;">{{error_message}}</p>
+        </div>
+        
+        <div class="auth__actions">
+          <input class="btn btn--sub btn--lg" type="submit" value="Create" />
+        </div>
+      </form>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+{% endblock %}

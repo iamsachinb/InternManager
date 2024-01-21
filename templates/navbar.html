@@ -1,0 +1,38 @@
+{% load static %}
+
+
+<!-- Header Section -->
+<header class="header">
+    <div class="container container--narrow">
+      <a href="" >
+        <img src="{% static 'images/tce-logo.jpeg' %}" alt="DevSearch Logo" width="100" height="80" />
+      </a>
+      <nav class="header__nav">
+        <input type="checkbox" id="responsive-menu" />
+        <label for="responsive-menu" class="toggle-menu">
+          <span>Menu</span>
+          <div class="toggle-menu__lines"></div>
+        </label>
+        <ul class="header__menu">
+          
+          
+          {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <li class="header__menuItem"><a href="{% url 'create-users' %}">Accounts</a></li>
+            <li class="header__menuItem"><a href="{% url 'interns' %}">Interns</a></li>
+              <li class="header__menuItem"><a href="{% url 'review' %}">Review</a></li>
+            {% else %}
+              <li class="header__menuItem"><a href="{% url 'apply' %}">Apply</a></li>
+            {% endif %}
+          <li class="header__menuItem"><a href="{% url 'account' %}">Account</a></li>
+          <li class="header__menuItem"><a href="{% url 'logout' %}" class="btn btn--sub">Logout</a></li>
+          {% else %}
+          <li class="header__menuItem"><a href="{% url 'login' %}" class="btn btn--sub">Login/Sign Up</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
