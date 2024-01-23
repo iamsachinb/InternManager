@@ -39,7 +39,7 @@ class ProfileForm(ModelForm):
 class InternForm(ModelForm):
     class Meta:
         model = Intern
-        fields = ['name', 'certificate', 'permission', 'report']
+        fields = ['name', 'permission',  'certificate', 'report']
 
     def __init__(self, *args, **kwargs):
         super(InternForm, self).__init__(*args, **kwargs)
