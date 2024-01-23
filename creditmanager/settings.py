@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-pzu=g6m1ew-(lr(z7yrvses$mlzlpfc^+(v&ni6#t!1#hx_5zw
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'intern-manager-86sw.onrender.com',
+    # 'intern-manager-86sw.onrender.com',
+    '*',
 ]
 
 
