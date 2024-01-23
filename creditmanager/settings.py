@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
     'intern-manager-86sw.onrender.com',
 ]
 CSRF_TRUSTED_ORIGINS = [
-    'https://intern-manager-86sw.onrender.com/',    
+    'https://intern-manager-86sw.onrender.com',    
     # Add other trusted origins as needed
 ]
 
