@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 import uuid
 from django.core.validators import FileExtensionValidator
 from django.core.validators import MaxValueValidator
-
+import os
 
 # Create your models here.
 
@@ -40,6 +40,16 @@ class Intern(models.Model):
     submissiondate = models.DateTimeField(auto_now_add=True)
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True, editable=False)
 
+    def delete(self, *args, **kwargs):
+        # Delete associated files before deleting the Intern instance
+        if self.certificate:
+            os.remove(self.certificate.path)
+        if self.permission:
+            os.remove(self.permission.path)
+        if self.report:
+            os.remove(self.report.path)
+
+        super().delete(*args, **kwargs)
     
 
     def __str__(self):
