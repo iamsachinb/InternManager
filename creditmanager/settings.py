@@ -144,6 +144,12 @@ EMAIL_HOST_PASSWORD = 'hnqrmrthhqrppchi'
 
 
 STATIC_URL = 'static/'
+
+DEFAULT_FILE_STORAGE = 'gdstorage.storage.GoogleDriveStorage'
+
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = os.path.join(BASE_DIR, 'django-intern.json')
+GOOGLE_DRIVE_STORAGE_MEDIA_ROOT = '/intern/'  # Folder path in your Google Drive where files will be stored
+
 MEDIA_URL = '/files/'
 
 STATICFILES_DIRS = [

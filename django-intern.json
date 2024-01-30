@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "intern-credit-manager-412321",
+  "private_key_id": "a8ff2c227997ab0ddbadd0219dac11f3dbfbce25",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDJurm7UMczEqbi\nTHZG+V0f+3qefvRreGaI04QTNasCLoR6EpAwP3Yym4WjuBED1WprwExCkJJcYs7w\np5Fw2Qrs+XFmqu+wQGxJWB57ZLGc7lawlnlGw9I+hNTYDlePx8blwwcJSWGZCICh\n2bv4ctdoYLUmiyEW6ivMWpbASSuXs74OWXJbFWyYD/KxLiJ/WEk361CBQVq5r2Xj\nKklt+9psYFZh/nXHGskoL3rVBGULB753MAHxQZBz9YLwopYzDZTle0AtxOVSMs/Z\n6dy3XQheZZvVyJb/MAGQjjLVKS3PjH2/Ue4dVhSVfBkH82qKD57d0ZxyMZa8t6K5\nV/XUvIphAgMBAAECggEACbVD/3JPfSh6YgfH0GTAmSEB1r3+1sDcVFzeLWDRj5Zm\nrIuXUfnCidnHWGiWXwlxUz6q8jAhbwiX82e+XYCAdgTkyB9VT3WGOzsI+oC5yyGC\n3VbcfsM+lgt6mmw0RWMvR1A3rDgnwNTdKzd+hDdzS4ljO7ffL4pfnGMb//nK0IR8\nHfT7gaa7U0Zra4ak+2QzqCGsc0dtRzGQ3Q6sVz9hKtBMMfK25ZX4qqkrff74jtVR\nn5kDtQRjddvq6XAieDL06F7c3qC63WoPFHoPNsXEqLLKegGuyAFy9idLsPGaKoOd\n/LgHYoBQCE5SW+GW5SqjpSS+2rpvQ7gdMLBN+fbl/QKBgQDj2/SP5SNEEclMrFGq\nAU+WUphmnnuS//GKmbaKwq2CZ2qd1X7YrXGYA6a/dubIiC9gR2FSMICxzTzH6et8\n7ET0YPIWV5WgQRBpwVecKL/x80ByVx4VQt9wokB63kk1OtUh0Y/j7AgNwQjvqybi\nHHg8GMjjZfOxsojiQa2Q63WV7QKBgQDipKUQrPISgAh7/c7MwZsQEG577s8fnW0k\nmzTfzJ1gHSMzqzwrClEw7dbrQeKqMnwDxXcDTN0M+oZezZGLmlbtgcY+a6YtE5pJ\nKAeIVLABZ7803IEyC9dwDk+EVcO8USybhIH0jwMGHCrr38TqGBczmeGiJ072BoGN\nLY1Sgut3xQKBgQDFbwcfz7mY95hmuUEhf3VImVS4RkZo/yB5qesDnN/fCGDXVfBN\nKywsPa20ZQBfbbEvSWpIXwKEDYPG7SdA3TB6V64sMcPSUc449HBHPP/kU5PZ/yZv\n4bvdypj4XbctSkb2wLBfG1t3H3XwxWoxrd14pTkb4HEh3cLB2Yrc8Ui3mQKBgDVd\nPPxzLEBM4zKGrVWq1F7w74LA1QYFpDg1TzrOy9NgqPQ2gmFD+aACsFMOXVdjsa2V\nphMh2v5+Unsp/fYX7hXYM5xo7mS4s+A7y6I/Bn4eNng03zqwbRaWWAS5yO+jUVSA\n27SAo96hbT3Cn3PbHkNpHSZ4CPCG0aQzMI5YAyddAoGBAIZUVqnhEsda3We8+nuU\npULc1l07YQ68OW/g0QvN6DZ5Mvq7ff9tPyGn7yVC8sVzpuGPxFbRhKhPGmMZMg62\nDXiwlqgGf9BaMxjWmCELd6paS0JrRpHV+QduIcIbM9o4U4pqqWzXd1/ufgRv0OjP\nO2H9OXe8qvVe1Y43a5LK8x2l\n-----END PRIVATE KEY-----\n",
+  "client_email": "intern-credit-manager-gdrive@intern-credit-manager-412321.iam.gserviceaccount.com",
+  "client_id": "102664633956274315965",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/intern-credit-manager-gdrive%40intern-credit-manager-412321.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

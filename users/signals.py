@@ -4,8 +4,12 @@ from django.conf import settings
 from django.core.mail import send_mail
 from .models import Profile, Intern
 from django.contrib.auth.models import User
+from django.db import models
+from django.core.files.storage import get_storage_class
 
+GoogleDriveStorage = get_storage_class('django_googledrive.storage.GoogleDriveStorage')
 
+gd_storage = GoogleDriveStorage()
 
 def internAcceptedOrRejected(sender, instance, created, **kwargs):
     intern = instance
@@ -52,7 +56,14 @@ def deleteUser(sender, instance, **kwargs):
     user = instance.user
     user.delete()
 
-
+@receiver(models.signals.post_delete, sender=Intern)
+def delete_associated_files(sender, instance, **kwargs):
+    if instance.certificate:
+        gd_storage.delete(instance.certificate.name)
+    if instance.permission:
+        gd_storage.delete(instance.permission.name)
+    if instance.report:
+        gd_storage.delete(instance.report.name)
 
 
 post_save.connect(updateUser, sender=Profile)
