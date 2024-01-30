@@ -5,9 +5,9 @@ from django.core.mail import send_mail
 from .models import Profile, Intern
 from django.contrib.auth.models import User
 from django.db import models
-from django.core.files.storage import get_storage_class
+from gdstorage.storage import GoogleDriveStorage
 
-GoogleDriveStorage = get_storage_class('django_googledrive.storage.GoogleDriveStorage')
+# Define Google Drive Storage
 gd_storage = GoogleDriveStorage()
 
 

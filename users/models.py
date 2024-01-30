@@ -4,9 +4,9 @@ import uuid
 from django.core.validators import FileExtensionValidator
 from django.core.validators import MaxValueValidator
 import os
-from django.core.files.storage import get_storage_class
+from gdstorage.storage import GoogleDriveStorage
 
-GoogleDriveStorage = get_storage_class('django_googledrive.storage.GoogleDriveStorage')
+# Define Google Drive Storage
 gd_storage = GoogleDriveStorage()
 
 # Create your models here.
