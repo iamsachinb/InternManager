@@ -7,8 +7,8 @@ import os
 from django.core.files.storage import get_storage_class
 
 GoogleDriveStorage = get_storage_class('django_googledrive.storage.GoogleDriveStorage')
-
 gd_storage = GoogleDriveStorage()
+
 # Create your models here.
 
 

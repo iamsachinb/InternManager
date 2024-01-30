@@ -8,8 +8,8 @@ from django.db import models
 from django.core.files.storage import get_storage_class
 
 GoogleDriveStorage = get_storage_class('django_googledrive.storage.GoogleDriveStorage')
-
 gd_storage = GoogleDriveStorage()
+
 
 def internAcceptedOrRejected(sender, instance, created, **kwargs):
     intern = instance
