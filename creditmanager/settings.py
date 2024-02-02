@@ -143,17 +143,16 @@ EMAIL_HOST_PASSWORD = 'lzllchsaycesnwma'
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 
-STATIC_URL = 'staticfiles/'
+STATIC_URL = 'static/'
 
 DEFAULT_FILE_STORAGE = 'gdstorage.storage.GoogleDriveStorage'
 
 GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = os.path.join(BASE_DIR, 'django-intern.json')
 GOOGLE_DRIVE_STORAGE_MEDIA_ROOT = '/intern/'  # Folder path in your Google Drive where files will be stored
 
-MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'staticfiles')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
