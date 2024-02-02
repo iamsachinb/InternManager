@@ -143,7 +143,7 @@ EMAIL_HOST_PASSWORD = 'lzllchsaycesnwma'
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 
-STATIC_URL = 'static/'
+STATIC_URL = 'staticfiles/'
 
 DEFAULT_FILE_STORAGE = 'gdstorage.storage.GoogleDriveStorage'
 
@@ -153,7 +153,7 @@ GOOGLE_DRIVE_STORAGE_MEDIA_ROOT = '/intern/'  # Folder path in your Google Drive
 MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'staticfiles')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
