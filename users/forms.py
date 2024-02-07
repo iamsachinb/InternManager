@@ -47,7 +47,7 @@ class InternForm(ModelForm):
         # Update widget attributes for all fields
         for name, field in self.fields.items():
             # Set required attribute to True for all fields except 'permission'
-            if name != 'permission':
+            if name != 'permission' or name != 'report':
                 field.widget.attrs.update({'class': 'input', 'required': 'true'})
             else:
                 # For 'permission' field, do not set required attribute
