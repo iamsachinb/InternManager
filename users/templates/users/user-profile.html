@@ -31,9 +31,15 @@
                   <div class="card__body dev">
                     <h6> {{intern.name}} </h6>
                     
-                    <p>Permission Letter: <a href="{{ intern.permission.url }}" download>Download </a>  </p> 
-                    <p>Certificate Letter: <a href="{{ intern.certificate.url }}" download>Download </a>   </p> 
-                    <p>Report Letter: <a href="{{ intern.report.url }}" download>Download  </a> </p>
+                    {% if intern.permission %}
+                  <a href="{{ intern.permission.url }}" download>Permission</a>
+                {% endif %}
+                {% if intern.certificate %}
+                  <a href="{{ intern.certificate.url }}" download>Certificate</a>
+                {% endif %}
+                {% if intern.report %}
+                  <a href="{{ intern.report.url }}" download>Report</a>
+                {% endif %}
                     <p>{{intern.submissiondate.name}}</p>
                     <p>{{intern.creditsrewarded}}</p>  
                   </div>
@@ -57,9 +63,15 @@
                 <div class="card__body dev">
                   <h6> {{intern.name}} </h6>
                   
-                  <p>Permission Letter: <a href="{{ intern.permission.url }}" download>Download </a>  </p> 
-                  <p>Certificate Letter: <a href="{{ intern.certificate.url }}" download>Download </a>  </p> 
-                  <p>Report Letter: <a href="{{ intern.report.url }}" download>Download  </a> </p>
+                  {% if intern.permission %}
+                  <a href="{{ intern.permission.url }}" download>Permission</a>
+                {% endif %}
+                {% if intern.certificate %}
+                  <a href="{{ intern.certificate.url }}" download>Certificate</a>
+                {% endif %}
+                {% if intern.report %}
+                  <a href="{{ intern.report.url }}" download>Report</a>
+                {% endif %}
                   <p>{{intern.submissiondate.name}}</p>
                   <p>{{intern.creditsrewarded}}</p>  
                 </div>
@@ -83,9 +95,15 @@
                 <div class="card__body dev">
                   <h6> {{intern.name}} </h6>
                   
-                  <p>Permission Letter: <a href="{{ intern.permission.url }}" download>Download </a>  </p> 
-                  <p>Certificate Letter: <a href="{{ intern.certificate.url }}" download>Download </a>  </p> 
-                  <p>Report Letter: <a href="{{ intern.report.url }}" download>Download  </a> </p>
+                  {% if intern.permission %}
+                  <a href="{{ intern.permission.url }}" download>Permission</a>
+                {% endif %}
+                {% if intern.certificate %}
+                  <a href="{{ intern.certificate.url }}" download>Certificate</a>
+                {% endif %}
+                {% if intern.report %}
+                  <a href="{{ intern.report.url }}" download>Report</a>
+                {% endif %}
                   <p>{{intern.submissiondate.name}}</p>
                   <p>{{intern.creditsrewarded}}</p>  
                 </div>

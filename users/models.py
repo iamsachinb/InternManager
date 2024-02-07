@@ -34,7 +34,7 @@ class Profile(models.Model):
 class Intern(models.Model):
 
     owner = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True, blank=True)
-    name = models.CharField(max_length=20, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
     reviewed = models.BooleanField(default=False)
     accepted = models.BooleanField(default=False)
     certificate = models.FileField(upload_to='certificate/', storage=gd_storage,  validators=[FileExtensionValidator(allowed_extensions=['pdf'])], null=True, blank=True)

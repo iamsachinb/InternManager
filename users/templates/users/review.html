@@ -39,9 +39,15 @@
                 <br>
                 <span class="message__author">{{intern.name}}</span>
                 
-                <a href="{{ intern.permission.url }}" download>Permission</a>
-                <a href="{{ intern.certificate.url }}" download>Certificate</a>
-                <a href="{{ intern.report.url }}" download>Report</a>
+                {% if intern.permission %}
+                  <a href="{{ intern.permission.url }}" download>Permission</a>
+                {% endif %}
+                {% if intern.certificate %}
+                  <a href="{{ intern.certificate.url }}" download>Certificate</a>
+                {% endif %}
+                {% if intern.report %}
+                  <a href="{{ intern.report.url }}" download>Report</a>
+                {% endif %}
                 <a href="{% url 'accept_intern' intern.id %}">Accept</a>
                 <a href="{% url 'reject_intern' intern.id %}">Decline</a>
               </a>
