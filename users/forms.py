@@ -51,5 +51,5 @@ class InternForm(ModelForm):
                 field.widget.attrs.update({'class': 'input', 'required': 'true'})
             else:
                 # For 'permission' field, do not set required attribute
-                field.widget.attrs.update({'class': 'input'})
+                field.widget.attrs.update({'class': 'input', 'required': 'false'})
 
