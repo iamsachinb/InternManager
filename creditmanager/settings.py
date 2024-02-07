@@ -148,7 +148,7 @@ STATIC_URL = 'static/'
 DEFAULT_FILE_STORAGE = 'gdstorage.storage.GoogleDriveStorage'
 
 GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = os.path.join(BASE_DIR, 'django-intern.json')
-GOOGLE_DRIVE_STORAGE_MEDIA_ROOT = '/intern/'  # Folder path in your Google Drive where files will be stored
+GOOGLE_DRIVE_STORAGE_MEDIA_ROOT = '/Industry Intern Credits 2024/'  # Folder path in your Google Drive where files will be stored
 
 
 STATICFILES_DIRS = [
