@@ -137,7 +137,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'tceitintern@gmail.com'
-EMAIL_HOST_PASSWORD = 'lzllchsaycesnwma'
+EMAIL_HOST_PASSWORD = 'qrkszssoclrqxauv'
 
 
 # Static files (CSS, JavaScript, Images)
