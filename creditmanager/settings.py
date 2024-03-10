@@ -34,6 +34,8 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -137,7 +139,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'tceitintern@gmail.com'
-EMAIL_HOST_PASSWORD = 'qrkszssoclrqxauv'
+EMAIL_HOST_PASSWORD = 'xfvuirwauekdyzfj'
 
 
 # Static files (CSS, JavaScript, Images)
